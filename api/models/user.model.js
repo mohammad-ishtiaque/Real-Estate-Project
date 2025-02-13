@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-import { type } from './../../node_modules/raw-body/index.d';
 
 
 const userSchema = new mongoose.Schema({
