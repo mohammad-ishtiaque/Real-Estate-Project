@@ -45,24 +45,27 @@ export default function SignUp() {
       <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="username"
+          placeholder="Enter Your Username"
           className="border p-3 rounded-lg"
           id="username"
           onChange={handleChange}
+          required
         />
         <input
           type="email"
-          placeholder="email"
+          placeholder="youremail@example.com"
           className="border p-3 rounded-lg"
           id="email"
+          required
           onChange={handleChange}
         />
         <input
           type="password"
-          placeholder="password"
+          placeholder="Enter Your Password"
           className="border p-3 rounded-lg"
           id="password"
           onChange={handleChange}
+          required
         />
         <button
           disabled={loading}
@@ -74,7 +77,7 @@ export default function SignUp() {
       <div className="flex gap-2 mt-5">
         <p>Have an account?</p>
         <Link to={"/sign-in"}>
-          <span className="text-blue-700">Sign in</span>
+          <span className="text-blue-700">Sign In</span>
         </Link>
       </div>
       {error && <p className='text-red-500 mt-5'>{error}</p>}
